@@ -93,10 +93,10 @@ print(type(n))
 product = input("Please enter your product name : ")
 
 # ข้อ 2.5
-price = input("Please enter your product price : ")
+price = float(input("Please enter your product price : "))
 
 # ข้อ 2.6
-amount = input("Please enter amount of your product : ")
+amount = int(input("Please enter amount of your product : "))
 
 #ข้อ 2.7
 height = float(input('Enter Height : '))
@@ -113,8 +113,8 @@ print('เวลาทั้งหมด {} วินาที' .format(time))
 
 #ข้อ 2.9
 x = float(input("กรุณากรอกค่าตัวแปร x : "))
-sum = 2 - x + ((3/7)*(x**2)) + ((5/11)*(x**3))
-print(sum)
+y = 2 - x + ((3/7)*(x**2)) + ((5/11)*(x**3))
+print(y)
 
 # ข้อ 3.1
 c = float(input("กรุณากรอกจำนวนองศาเซลเซียส : "))
