@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
 count = 0
+# สร้างฟังก์ชั่นเพื่อนับปุ่มกด Create new function for count press button.
 def press():    
     global count
     count+=1
