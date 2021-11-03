@@ -6,8 +6,8 @@ def press():
     global count
     count+=1
     print("Times Press:",count)
-    messagebox.showwarning("Nofications","Hey! You press me {} times.".format(count))
     app.title("Python Beginner - You press me with %s times!"%count)
+    messagebox.showwarning("Nofications","Hey! You press me {} times.".format(count))
 
 ######################################################
 app = Tk()
