@@ -1,4 +1,22 @@
 #  การคำนวณค่าไฟฟ้า
+def cmd_elc():
+    elc_service = elc + 8.19
+    ft = 0.1160
+    ft_service = elc_service * ft
+    bill = 38.22
+    ft_all = elc_service - ft_service
+    elc_all = ft_all + bill
+    vat = elc_all * 0.07
+    total = elc_all + vat
+    print("****************************************")
+    print("ค่าบริการไฟฟ้าฐานรวม:", '%.2f' % elc_service, "บาท")
+    print("ค่า Ft:", ft, "บาท")
+    print("ค่าบริการรายเดือน:", '%.2f' % bill, "บาท")
+    print("รวมเงินค่าไฟฟ้า:", '%.2f' % elc_all, "บาท")
+    print("ภาษีมูลค่าเพิ่ม 7%:", '%.2f' % vat, "บาท")
+    print("\033[92m\033[1mรวมยอดที่ต้องชำระทั้งสิ้น:", '%.2f' % total, "บาท")
+    print("\033[0m****************************************")
+
 print("****************************************")
 print("การไฟฟ้าส่วนภูมิภาค")
 print("****************************************")
@@ -18,76 +36,15 @@ else:
     print('\n')
 if 51 <= unit <= 100:
     elc = (2.348 * 15) + (2.988 * 10) + (3.241 * 10) + (3.623 * (unit - 35))
-    elc_service = elc + 8.19
-    ft = 0.1160
-    ft_service = elc_service * ft
-    bill = 38.22
-    ft_all = elc_service - ft_service
-    elc_all = ft_all + bill
-    vat = elc_all * 0.07
-    total = elc_all + vat
-    print("****************************************")
-    print("ค่าบริการไฟฟ้าฐานรวม:", '%.2f' % elc_service, "บาท")
-    print("ค่า Ft:", ft, "บาท")
-    print("ค่าบริการรายเดือน:", '%.2f' % bill, "บาท")
-    print("รวมเงินค่าไฟฟ้า:", '%.2f' % elc_all, "บาท")
-    print("ภาษีมูลค่าเพิ่ม 7%:", '%.2f' % vat, "บาท")
-    print("\033[92m\033[1mรวมยอดที่ต้องชำระทั้งสิ้น:", '%.2f' % total, "บาท")
-    print("\033[0m****************************************")
+    cmd_elc()
 elif 101 <= unit <= 150:
     elc = (2.348 * 15) + (2.988 * 10) + (3.241 * 10) + (3.623 * 65) + (3.717 * (unit - 100))
-    elc_service = elc + 8.19
-    ft = 0.1160
-    ft_service = elc_service * ft
-    bill = 38.22
-    ft_all = elc_service - ft_service
-    elc_all = ft_all + bill
-    vat = elc_all * 0.07
-    total = elc_all + vat
-    print("****************************************")
-    print("ค่าบริการไฟฟ้าฐานรวม:", '%.2f' % elc_service, "บาท")
-    print("ค่า Ft:", ft, "บาท")
-    print("ค่าบริการรายเดือน:", '%.2f' % bill, "บาท")
-    print("รวมเงินค่าไฟฟ้า:", '%.2f' % elc_all, "บาท")
-    print("ภาษีมูลค่าเพิ่ม 7%:", '%.2f' % vat, "บาท")
-    print("\033[92m\033[1mรวมยอดที่ต้องชำระทั้งสิ้น:", '%.2f' % total, "บาท")
-    print("\033[0m****************************************")
+    cmd_elc()
 elif 151 <= unit <= 400:
     elc = (2.348 * 15) + (2.988 * 10) + (3.241 * 10) + (3.623 * 65) + (3.717 * 50) + (4.221 * (unit - 150))
-    elc_service = elc + 8.19
-    ft = 0.1160
-    ft_service = elc_service * ft
-    bill = 38.22
-    ft_all = elc_service - ft_service
-    elc_all = ft_all + bill
-    vat = elc_all * 0.07
-    total = elc_all + vat
-    print("****************************************")
-    print("ค่าบริการไฟฟ้าฐานรวม:", '%.2f' % elc_service, "บาท")
-    print("ค่า Ft:", ft, "บาท")
-    print("ค่าบริการรายเดือน:", '%.2f' % bill, "บาท")
-    print("รวมเงินค่าไฟฟ้า:", '%.2f' % elc_all, "บาท")
-    print("ภาษีมูลค่าเพิ่ม 7%:", '%.2f' % vat, "บาท")
-    print("\033[92m\033[1mรวมยอดที่ต้องชำระทั้งสิ้น:", '%.2f' % total, "บาท")
-    print("\033[0m****************************************")
+    cmd_elc()
 elif unit > 400:
-    elc = (2.348 * 15) + (2.988 * 10) + (3.241 * 10) + (3.623 * 65) + (3.717 * 50) + (4.221 * 250) + (4.42 * (unit
-                                                                                                              - 400))
-    elc_service = elc + 8.19
-    ft = 0.1160
-    ft_service = elc_service * ft
-    bill = 38.22
-    ft_all = elc_service - ft_service
-    elc_all = ft_all + bill
-    vat = elc_all * 0.07
-    total = elc_all + vat
-    print("****************************************")
-    print("ค่าบริการไฟฟ้าฐานรวม:", '%.2f' % elc_service, "บาท")
-    print("ค่า Ft:", -ft, "บาท")
-    print("ค่าบริการรายเดือน:", '%.2f' % bill, "บาท")
-    print("รวมเงินค่าไฟฟ้า:", '%.2f' % elc_all, "บาท")
-    print("ภาษีมูลค่าเพิ่ม 7%:", '%.2f' % vat, "บาท")
-    print("\033[92mรวมยอดที่ต้องชำระทั้งสิ้น:", '%.2f' % total, "บาท")
-    print("\033[0m****************************************")
+    elc = (2.348 * 15) + (2.988 * 10) + (3.241 * 10) + (3.623 * 65) + (3.717 * 50) + (4.221 * 250) + (4.42 * (unit - 400))
+    cmd_elc()
 else:
     elc = 0
